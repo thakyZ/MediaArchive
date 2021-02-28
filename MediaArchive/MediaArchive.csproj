@@ -1,7 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <PublishTrimmed>True</PublishTrimmed>
     <Nullable>enable</Nullable>
     <RootNamespace>NekoBoiNick.MediaArchive</RootNamespace>
   </PropertyGroup>
@@ -9,10 +11,10 @@
     <PackageReference Include="Avalonia" Version="0.10.0" />
     <PackageReference Include="Avalonia.Desktop" Version="0.10.0" />
     <PackageReference Include="Avalonia.Diagnostics" Version="0.10.0" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.0" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
    </ItemGroup>
   <ItemGroup>
-    <Reference Include="XamlControlsGallery">
-      <HintPath>Library\XamlControlsGallery.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\XamlControlsGallery\XamlControlsGallery\XamlControlsGallery.csproj" />
   </ItemGroup>
 </Project>
